@@ -1,0 +1,75 @@
+REACT FULL COURSE BY CHAI AUR CODE =>
+
+#> package.json in react file ===========================>
+
+It is the entry point of the react file. It has the name, version, dependencies,etc. There is react, react-dom(used for browsers), react-scripts(used to run the app or make that production(eg -ready, start, build, test, eject)), some testing libraries, web vitals(sees the performance, to record or track the speed of app), esLintConfig(used to show that lines under the code when it can be written better), browserList(consists of the browsers on which it will run) & development.
+
+#> "npm run start" to run ===============================>
+
+#> "npm run build" (if we run this adds a new build folder also reduce the sizes) ===========================>
+
+#> "npm create vite@latest" used to install faster react app and have to run "npm install" to download the node_modules file and other packages req to run the app and atlast "npm run dev". ===============================>
+
+#> React makes its own DOM(ReactDOM) and creates root(createRoot) by selecting the root div(doc.getEleById('root')) from the index.html file and renders(.render()) in strict mode(<React.StrictMode>) and wraps the App
+Component(<App /> and file is App.jsx) in it. ============================>
+
+#> App is a function returns html and exports and it renders html! Writing in Javascript but sending html!
+
+#> In the create-react-app the react scripts injects the react into the index.html file but in vite-react-app that one is given directly into the index.html file from the start!
+
+#> <></> are called Fragments.
+
+#> React is called single page applications because we inject react into the same index.html file's root div and modify that according to needs
+
+#> ReactDOM".createRoot" behind the scenes creates a DOM like structure same as the browser's DOM. Then it compares the main DOM to its DOM and updates that particular part which is needed or changed in UI. The browser DOM removes the full DOM and again repaints the DOM and this is called Page Reload. But in Virtual DOM all of the DOM can be tracked(traced) and only the changed values replaced accoring to need.
+
+#> React-fiber-architecture ===========================================>
+
+React Fiber is an ongoing reimplementation of React's core algorithm. The goal is to increase for areas like animation, layout, gestures etc.(the problem was immediate update example need to update one thing then during the process two update request came for the same thing), the key features are the ability to pause, abort or reuse work as new updates come in, ability to assign priority to different types of updates; new concurrency primitives.
+
+#> Reconciliation =>
+
+The reconciliation algorithm is used by React to diff one tree with another to determine which parts to be changed.(Virtual DOM and the real DOM).
+
+#> update => a change in the data used to render a React app. Usually the result of 'setState'. Eventually results in a re-render.
+
+#> When we render a React app, a tree of nodes that describes the app is generated and saved in memory. This tree is then flushed to the rendering environment = example, in case of browser application it is translated into a set of DOM operations. When the app is updated(usually via 'setState'), a new tree is generated. The new tree is diffed with the prev tree to compute which operations are neededto update the rendered app.
+
+#> Reason we use keys in map or arrays because of react fiber diffing of lists is performed using keys.
+
+#> Interview Question ======> What will be the value?
+----------------------------------------------------------
+const [counter, setCounter] = useState(15);
+
+const addValue = () => {
+    setCounter(counter + 1);
+    setCounter(counter + 1);
+    setCounter(counter + 1);
+    setCounter(counter + 1);
+    setCounter(counter + 1);
+}
+
+// The value is 16!
+----------------------------------------------------------
+
+The value will be 16, because the useState send the updates needed in UI in batches! (React Fiber Algorithm).
+All of the counters updates the same value in a batch, so the solution is =>
+
+----------------------------------------------------------
+
+    setCounter((prevCounter) => prevCounter + 1);
+    setCounter((prevCounter) => prevCounter + 1);
+    setCounter((prevCounter) => prevCounter + 1);
+    setCounter((prevCounter) => prevCounter + 1);
+
+// The value is 19!
+
+----------------------------------------------------------
+
+#> useCallback = is a react hook that lets u cache a fn defination between re-renders. It memorize the function(as many as possible maybe full or some of the reusable parts).
+
+#> useRef and useEffect learned too! Whenever page loads 1st time useEffect calls and has dependencies on which if the dependencies change it will be called too! For a good UI, we use useRef which gives the reference to the element in the webpage and can be manipulated with it!
+
+#> 
+ 
+#> 
