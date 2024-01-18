@@ -70,6 +70,7 @@ All of the counters updates the same value in a batch, so the solution is =>
 
 #> useRef and useEffect learned too! Whenever page loads 1st time useEffect calls and has dependencies on which if the dependencies change it will be called too! For a good UI, we use useRef which gives the reference to the element in the webpage and can be manipulated with it!
 
-#> 
+#>  09-mini-context => first make a file name UserContext.js -> context folder -> src folder
+Then import React and createContext variable and export it. Then create a provider to use the data(make a file UserContextProvider.jsx inside context folder)
  
 #> 
