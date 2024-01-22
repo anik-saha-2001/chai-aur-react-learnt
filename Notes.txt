@@ -73,4 +73,4 @@ All of the counters updates the same value in a batch, so the solution is =>
 #>  09-mini-context => first make a file name UserContext.js -> context folder -> src folder
 Then import React and createContext variable and export it. Then create a provider to use the data(make a file UserContextProvider.jsx inside context folder)
  
-#> 
+#> Redux-toolkit has store, reducers, useSelector and useDispatch mainly.
