@@ -77,7 +77,7 @@ Then import React and createContext variable and export it. Then create a provid
 
 #> ENV variables => We will use databases and applications where there will be unique client IDs, secrets, passwords etc and React is a frontend library. So we make system variables, which are stored differently and we deply our application into production then in any system(vercel, netlify etc) they have their secret manager and they paste the name and value wherever is required!
 
-#> To access the env variable we must declare the variable name like "VITE_REACT_APP_NAME..." and to access that in App.jsx we write "console.log(import.meta.env.VITE_REACT_APP_NAME...)" 
+#> To access the env variable we must declare the variable name like "VITE_APP_NAME and to access that in App.jsx we write "console.log(import.meta.env.VITE_APP_NAME)". 
 
 #>
 
