@@ -74,3 +74,5 @@ All of the counters updates the same value in a batch, so the solution is =>
 Then import React and createContext variable and export it. Then create a provider to use the data(make a file UserContextProvider.jsx inside context folder)
  
 #> Redux-toolkit has store, reducers, useSelector and useDispatch mainly.
+
+#> ENV variables => We will use databases and applications where there will be unique client IDs, secrets, passwords etc and React is a frontend library. So we make system variables, which are stored differently and we deply our application into production then in any system(vercel, netlify etc) they have their secret manager and they paste the name and value wherever is required!
