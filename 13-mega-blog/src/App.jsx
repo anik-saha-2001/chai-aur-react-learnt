@@ -1,15 +1,11 @@
-import { useState } from "react";
-
 function App() {
-  const [count, setCount] = useState(0);
+  const handleClick = () => {
+    console.log(import.meta.env.VITE_REACT_APP_APPWRITE_URL);
+  };
 
   return (
     <>
-      <h1>Vite + React</h1>
-
-      <button onClick={() => setCount((count) => count + 1)}>
-        count is {count}
-      </button>
+      <h1 onClick={handleClick}>A blog app with Appwirte</h1>
     </>
   );
 }
